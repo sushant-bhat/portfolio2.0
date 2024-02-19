@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/indexmobile.css">
     <title>Sushant Bhat</title>
 </head>
 <body>
     <header>
         <nav>
             <a href="./index.html">Home</a>
-            <div>
+            <button id="nav-open-btn">Menu</button>
+            <div id="nav-links">
+                <button id="nav-close-btn">X</button>
                 <a href="./experience.html">Experience</a>
                 <a href="./projects.html">Projects</a>
                 <a href="./contact.html">Contact</a>
@@ -18,12 +21,27 @@
     </header>
     <main>
         <h1>Hi, I am Sushant</h1>
-        <ul>
-            <li>A Software Engineer</li>
-            <li>A Budding Game Developer</li>
-            <li>A Passionate Cook</li>
-            <li>A Loving Husband (Don't ask my wife)</li>
+        <ul id="about-list">
+            <li>
+                <h2>A Software Engineer</h2>
+                <img src="https://picsum.photos/200" alt="">
+            </li>
+            <li>
+                <h2>A Budding Game Developer</h2>
+                <img src="https://picsum.photos/200" alt="">
+            </li>
+            <li>
+                <h2>A Passionate Cook</h2>
+                <img src="https://picsum.photos/200" alt="">
+            </li>
+            <li>
+                <h2>A Loving Husband</h2>
+                <h3>(Don't ask my wife)</h3>
+                <img src="https://picsum.photos/200" alt="">
+            </li>
         </ul>
+        <button id="about-btn">TAP</button>
     </main>
 </body>
+<script src="/js/index.js"></script>
 </html>
