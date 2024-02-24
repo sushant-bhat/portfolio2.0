@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/indexmobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <title>Sushant Bhat</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="./index.html"><img src="./images/home.png" width="32" alt=""></a>
-            <button id="nav-open-btn">Menu</button>
+            <a id="home-btn" href="./index.html"><img src="./images/home.png" width="32" alt=""></a>
+            <button id="nav-open-btn">
+                <div class="nav-ham"></div>
+                <div class="nav-ham"></div>
+                <div class="nav-ham"></div>
+            </button>
             <div id="nav-links">
-                <button id="nav-close-btn">X</button>
+                <button id="nav-close-btn"><img src="./images/cancel.png" width="16px" alt=""></button>
                 <a href="./experience.html">Experience</a>
                 <a href="./projects.html">Projects</a>
                 <a href="./contact.html">Contact</a>
@@ -40,7 +45,8 @@
                 <img src="./images/couple.png" width="200" alt="">
             </li>
         </ul>
-        <a id="about-btn"><img src="./images/button.png" width="50" alt=""></a>
+        <!-- <a id="about-btn"><img src="./images/button.png" width="50" alt=""></a> -->
+        <button id="about-btn" type="button"></button>
     </main>
 </body>
 <script src="./js/index.js"></script>

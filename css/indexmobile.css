@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 * {
     margin: 0;
@@ -7,7 +9,9 @@
 }
 
 body {
-    font-family: "Mukta";
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    background-color: #CECECE;
 }
 
 ul {
@@ -23,18 +27,24 @@ nav {
     border-bottom: 0.2rem solid black;
 }
 
-button {
+#nav-open-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+    padding: 0.8em;
+    background-color: inherit;
     border: none;
-    border-radius: 0.5em;
-    padding: 0.5em;
-    cursor: pointer;
+}
+
+.nav-ham {
+    height: 2px;
+    width: 1rem;
+    background-color: #000;
 }
 
 #nav-links {
-    display: none;
-}
-
-#nav-links.open {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,10 +55,40 @@ button {
     z-index: 1;
     right: 0;
     top: 0;
-    background-color: black;
+    background-color: #CECECE;
+    transform: translateX(100%);
+    transition: transform 0.2s ease;
+    box-shadow: -5px -5px 10px hsla(0, 0%, 100%, 0.37),
+                5px 5px 10px hsla(0, 0%, 0%, 0.37);
+}
+
+#nav-links.open {
+    transform: translateX(0);
+}
+
+#nav-links > a {
+    text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    color: #000;
+    padding: 0.2em;
+    padding-block: 0.5em;
+    width: 80%;
+    text-align: center;
+    border-radius: 0.2em;
+    box-shadow: -5px -5px 10px hsla(0, 0%, 100%, 0.37),
+                5px 5px 10px hsla(0, 0%, 0%, 0.37);
+}
+
+#nav-links > a:active {
+    transform: scale(0.9);
+    box-shadow: inset -2px -2px 10px #FFF,
+                inset 2px 2px 10px #000;
 }
 
 #nav-close-btn {
+    border: none;
+    background-color: inherit;
     align-self: flex-end;
     padding: 0.5em;
 }
@@ -57,11 +97,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     gap: 1rem;
-}
-
-#about-list {
-    min-height: 50dvh;
+    min-height: 80dvh;
 }
 
 #about-list > li {
@@ -75,9 +113,19 @@ main {
 }
 
 #about-btn {
+    font-family: "Nunito Sans", sans-serif;
+    border-radius: 50%;
+    background-color: #CECECE;
+    backdrop-filter: blur(10px);
+    padding: 2em;
+    border: none;
+    box-shadow: -2px -2px 10px #FFF,
+                2px 2px 10px #000;
     transition: transform 0.1s ease;
 }
 
 #about-btn:active {
     transform: scale(0.9);
+    box-shadow: inset -2px -2px 10px #FFF,
+                inset 2px 2px 10px #000;
 }
